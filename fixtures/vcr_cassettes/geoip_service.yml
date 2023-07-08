@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.ip2location.io/?ip=2606%3A54c0%3A76a0%3A13f0%3A%3A6a%3A51&key=<ip2location_api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 08 Jul 2023 20:58:39 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      x-frame-options:
+      - DENY
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      referrer-policy:
+      - no-referrer-when-downgrade
+      content-security-policy:
+      - 'default-src * data: ''unsafe-eval'' ''unsafe-inline'';frame-ancestors ''self'';'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      permissions-policy:
+      - accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(),
+        microphone=(), payment=(), usb=(), interest-cohort=()
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XaNM9XgyUccNIL7X6MAl2jYG2xUB8Po9jYRfyTykLtTXGYGokD5kSy6ailoqcfEqkN9Nx6zIvRJ3FCzc%2FXcCgDVdSXnaY%2BHfgXLTjP%2BxuNmElnb8ZuGofvyZlb9TKa5exF6ebBE%3D"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 7e3b3f19bc910fa0-EWR
+      content-encoding:
+      - gzip
+      alt-svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"ip":"2606:54c0:76a0:13f0:0000:0000:006a:0051","country_code":"US","country_name":"United
+        States of America","region_name":"Rhode Island","city_name":"Providence","latitude":41.823834,"longitude":-71.412697,"zip_code":"02901","time_zone":"-04:00","asn":"13335","as":"CloudFlare
+        Inc.","is_proxy":false}'
+  recorded_at: Sat, 08 Jul 2023 20:58:39 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,10 @@
+<% content_for :head do %>
+  <meta name='geolocation' content=<%= @geolocation.to_json %> />
+  <meta name='stations' content='<%= @stations.html_safe %>' />
+<% end %>
+
+<h1>Stations Map</h1>  
+  
+<div id="app">  
+  <stations-map></stations-map>  
+</div>  

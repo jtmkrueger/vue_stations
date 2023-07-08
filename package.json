@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "vite": "^4.4.1",
+    "vite-plugin-ruby": "^3.2.2"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "mapbox-gl": "^2.15.0",
+    "vue": "^3.3.4"
+  }
+}
