@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>VueStations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,7 +16,9 @@
     <% end %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
+    <div class="container mx-auto bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
+      <%= yield %>
+    </div>
   </body>
 </html>

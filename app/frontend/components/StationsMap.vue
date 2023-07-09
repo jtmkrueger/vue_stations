@@ -35,7 +35,6 @@ export default {
       })
 
       map.on('load', () => {
-        console.log("geojson", geojson)
         for (const feature of geojson.features) {
           const el = document.createElement('div')
           el.className = 'marker'
@@ -43,14 +42,16 @@ export default {
           new mapboxgl.Marker(el)
             .setLngLat(feature.geometry.coordinates)
             .setPopup(
-              new mapboxgl.Popup({ offset: 25 }) // add popups
+              new mapboxgl.Popup({
+                offset: 25,
+                closeButton: false
+              }) // add popups
                 .setHTML(
-                  `<h3>${feature.properties.ev_network}</h3><p>${feature.properties.street_address}</p>`
+                  `<h3 class="text-slate-900">${feature.properties.ev_network}</h3><p class="text-slate-900">${feature.properties.street_address}</p>`
                 )
             )
             .addTo(map)
         }
-        // TODO: Here we want to load/setup the popup
       })
     })
     return {}
