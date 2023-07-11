@@ -5,8 +5,6 @@ require 'test_helper'
 class LocalStationsControllerTest < ActionDispatch::IntegrationTest
   test 'index returns success' do
     VCR.use_cassette('local_stations_index') do
-      gg = GeoipService.new('')
-
       get root_url
       assert_response :success
     end
