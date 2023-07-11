@@ -60,6 +60,7 @@ export default {
 </script>
 
 <style>
+/* FIXME: how do I reference assets here? */
 #map {
   height: 100vh;
 }
