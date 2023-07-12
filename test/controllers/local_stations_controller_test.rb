@@ -10,7 +10,7 @@ class LocalStationsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'index sets a geolocation headers' do
+  test 'index sets a geolocation header' do
     VCR.use_cassette('local_stations_index') do
       get root_url
       geo_header = Nokogiri::HTML
@@ -20,6 +20,18 @@ class LocalStationsControllerTest < ActionDispatch::IntegrationTest
 
       assert_not_nil json_geo['lat']
       assert_not_nil json_geo['lng']
+    end
+  end
+
+  test 'index sets a stations header' do
+    VCR.use_cassette('local_stations_index') do
+      get root_url
+      geo_header = Nokogiri::HTML
+                   .parse(@response.body)
+                   .at('meta[name="stations"]')['content']
+      json_geo = JSON.parse(geo_header)
+
+      assert_not_nil json_geo['features']
     end
   end
 end
